@@ -27,7 +27,7 @@
                     </div>
                     <!-- End title and tagline -->
                     <!-- Some social icons -->
-                    <div class="{{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in three{{ end }}">
+                    <div class="social-icons-hero {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in three{{ end }}">
                         {{ partial "home/social.html" . }}
                     </div>
                     <!-- End top social icons -->
