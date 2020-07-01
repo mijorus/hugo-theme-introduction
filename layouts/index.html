@@ -10,6 +10,15 @@
     </head>
 
     <body>
+        <div id="blurred-shade">
+            <div id="blurred-shade-container">
+                <h1>Sci-Fi Ostia</h1>
+                <p>caricamento...</p>
+                </div>
+            </div>
+        </div>
+        
+
         {{ with .Site.GetPage "/home" }}
         <section id="top" class="hero is-{{ .Site.Params.home.introHeight | default "fullheight" }}">
             <!-- Hero head section to play nice with Bulma -->
@@ -139,6 +148,8 @@
         {{ $bundleMoment := slice $momentjs $momentTimezone $momentTimezoneWithData $initMomentjs | resources.Concat "js/bundleMoment.js" | fingerprint }}
         <script src="{{ $bundleMoment.Permalink }}" integrity="{{ $bundleMoment.Data.Integrity }}"></script>
         {{ end }}
+
+    <script src="{{"js/resizeHandler.js"}}"></script>
     </body>
 
 </html>
